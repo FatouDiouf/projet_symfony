@@ -16,24 +16,26 @@ use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use App\Entity\Service;
 use App\Entity\User;
 use App\Form\AuthentificationType;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class HomeController extends AbstractController
 {
     /**
      * @Route("/", name="home")
      */
-    public function index(Request $request, ObjectManager $mananger)
+    public function index(Request $request, ObjectManager $mananger, UserPasswordEncoderInterface $encoder)
     {
         $user = new User();
         $form = $this->createForm(AuthentificationType::class,$user);
-        if($form->isSubmitted() && $form->isValid()){
-            $form->handleRequest($request);
-        $mananger->persist($user);
-        $mananger->flush();
-        }
-        
+        $form->handleRequest($request);
 
-        
+        if($form->isSubmitted() && $form->isValid()){
+            $hach = $encoder->encodePassword($user, $user->getPassword());
+            $user->setPassword($hach);
+            $mananger->persist($user);
+            $mananger->flush();
+        }
+
         return $this->render('home/index.html.twig', [
             'form' => $form->createView()
         ]);
