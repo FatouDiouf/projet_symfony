@@ -33,7 +33,7 @@ class __TwigTemplate_770e235fd43b5f9efc48905c0586bcbf674fe8b37bd4913de40d4335b14
     protected function doGetParent(array $context)
     {
         // line 1
-        return "base.html.twig";
+        return "base1.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
@@ -45,7 +45,7 @@ class __TwigTemplate_770e235fd43b5f9efc48905c0586bcbf674fe8b37bd4913de40d4335b14
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "home/index.html.twig"));
 
-        $this->parent = $this->loadTemplate("base.html.twig", "home/index.html.twig", 1);
+        $this->parent = $this->loadTemplate("base1.html.twig", "home/index.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -95,14 +95,29 @@ class __TwigTemplate_770e235fd43b5f9efc48905c0586bcbf674fe8b37bd4913de40d4335b14
         // line 12
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 12, $this->source); })()), 'form_start');
         echo "
-";
-        // line 13
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 13, $this->source); })()), 'widget');
+<div class=\"row\">
+    <div class=\"col-lg-4\"></div>
+    <div class=\"col-lg-4\">
+        ";
+        // line 16
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 16, $this->source); })()), 'widget');
         echo "
- <button type=\"submit\" class=\"btn btn-success\"> Connexion </button>
+        
+    </div>
+    <div class=\"col-lg-4\"></div>
+</div>
+
+<div class=\"row\">
+        <div class=\"col-lg-4\"></div>
+        <div class=\"col-lg-4\">
+            <button type=\"submit\" class=\"btn btn-success\"> Connexion </button> 
+        </div>
+        <div class=\"col-lg-4\"></div>
+    </div>
+
 ";
-        // line 15
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 15, $this->source); })()), 'form_end');
+        // line 30
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 30, $this->source); })()), 'form_end');
         echo "
 ";
         
@@ -125,12 +140,12 @@ class __TwigTemplate_770e235fd43b5f9efc48905c0586bcbf674fe8b37bd4913de40d4335b14
 
     public function getDebugInfo()
     {
-        return array (  105 => 15,  100 => 13,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  120 => 30,  103 => 16,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("{% extends 'base.html.twig' %}
+        return new Source("{% extends 'base1.html.twig' %}
 
 {% block title %}Autentification!{% endblock %}
 
@@ -142,8 +157,23 @@ class __TwigTemplate_770e235fd43b5f9efc48905c0586bcbf674fe8b37bd4913de40d4335b14
 
 <h1>Se connecter</h1>
 {{form_start(form)}}
-{{form_widget(form)}}
- <button type=\"submit\" class=\"btn btn-success\"> Connexion </button>
+<div class=\"row\">
+    <div class=\"col-lg-4\"></div>
+    <div class=\"col-lg-4\">
+        {{form_widget(form)}}
+        
+    </div>
+    <div class=\"col-lg-4\"></div>
+</div>
+
+<div class=\"row\">
+        <div class=\"col-lg-4\"></div>
+        <div class=\"col-lg-4\">
+            <button type=\"submit\" class=\"btn btn-success\"> Connexion </button> 
+        </div>
+        <div class=\"col-lg-4\"></div>
+    </div>
+
 {{form_end(form)}}
 {% endblock %}
 ", "home/index.html.twig", "/home/fatou/mon-projet/templates/home/index.html.twig");

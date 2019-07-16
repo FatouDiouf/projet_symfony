@@ -34,6 +34,7 @@ class HomeController extends AbstractController
             $user->setPassword($hach);
             $mananger->persist($user);
             $mananger->flush();
+            return $this->redirectToRoute('accueil');
         }
 
         return $this->render('home/index.html.twig', [
@@ -52,12 +53,12 @@ class HomeController extends AbstractController
      * @Route("/home/ajout",name="ajout")
      * @Route("/home/{id}/ajout",name="modif")
      */
-    public function ajoutmodif(Employer $employe = null, Request $request,ObjectManager $mananger){
+    public function ajoutmodif(Employer $employel, Request $request,ObjectManager $mananger){
         
         if (!$employe) {
             $employe = new Employer();
         }
-        $service = new Service();
+      //  $service = new Service();
         $form = $this->createFormBuilder($employe)
                     ->add('matricule',TextType::class)   
                      ->add('nom',TextType::class)   

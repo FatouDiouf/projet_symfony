@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %}
+{% extends 'base1.html.twig' %}
 
 {% block title %}Autentification!{% endblock %}
 
@@ -10,7 +10,22 @@
 
 <h1>Se connecter</h1>
 {{form_start(form)}}
-{{form_widget(form)}}
- <button type="submit" class="btn btn-success"> Connexion </button>
+<div class="row">
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4">
+        {{form_widget(form)}}
+        
+    </div>
+    <div class="col-lg-4"></div>
+</div>
+
+<div class="row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+            <button type="submit" class="btn btn-success"> Connexion </button> 
+        </div>
+        <div class="col-lg-4"></div>
+    </div>
+
 {{form_end(form)}}
 {% endblock %}

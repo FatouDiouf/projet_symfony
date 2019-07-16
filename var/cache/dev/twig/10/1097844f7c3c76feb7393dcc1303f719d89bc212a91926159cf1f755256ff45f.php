@@ -61,31 +61,25 @@ class __TwigTemplate_bba37f563a5e776d38bf009e5eb5758fe244c8d7e87958a2d3f9274361d
     <body>
 
         <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">
-  <a class=\"navbar-brand\" href=\"";
-        // line 12
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
-        echo "\">Sonatel Academy</a>
-  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarColor02\" aria-controls=\"navbarColor02\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
-    <span class=\"navbar-toggler-icon\"></span>
-  </button>
+  
 
   <div class=\"collapse navbar-collapse\" id=\"navbarColor02\">
     <ul class=\"navbar-nav mr-auto\">
       <li class=\"nav-item\">
         <a class=\"nav-link\" href=\"";
-        // line 20
+        // line 17
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("accueil");
-        echo "\">Home <span class=\"sr-only\">(current)</span></a>
+        echo "\">Accueil <span class=\"sr-only\">(current)</span></a>
       </li>
       <li class=\"nav-item\">
         <a class=\"nav-link\" href=\"";
-        // line 23
+        // line 20
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ajout");
         echo "\">Ajout Employer</a>
       </li>
       <li class=\"nav-item\">
         <a class=\"nav-link\" href=\"";
-        // line 26
+        // line 23
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("lister");
         echo "\">Lister les employés</a>
       </li>
@@ -98,14 +92,14 @@ class __TwigTemplate_bba37f563a5e776d38bf009e5eb5758fe244c8d7e87958a2d3f9274361d
 </nav>
         <div class=\"container\">
             ";
-        // line 36
+        // line 33
         $this->displayBlock('body', $context, $blocks);
-        // line 37
+        // line 34
         echo "        </div>
         ";
-        // line 38
+        // line 35
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 39
+        // line 36
         echo "    </body>
 </html>
 ";
@@ -154,7 +148,7 @@ class __TwigTemplate_bba37f563a5e776d38bf009e5eb5758fe244c8d7e87958a2d3f9274361d
 
     }
 
-    // line 36
+    // line 33
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -172,7 +166,7 @@ class __TwigTemplate_bba37f563a5e776d38bf009e5eb5758fe244c8d7e87958a2d3f9274361d
 
     }
 
-    // line 38
+    // line 35
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -202,7 +196,7 @@ class __TwigTemplate_bba37f563a5e776d38bf009e5eb5758fe244c8d7e87958a2d3f9274361d
 
     public function getDebugInfo()
     {
-        return array (  176 => 38,  158 => 36,  140 => 7,  121 => 5,  109 => 39,  107 => 38,  104 => 37,  102 => 36,  89 => 26,  83 => 23,  77 => 20,  66 => 12,  60 => 8,  58 => 7,  53 => 5,  47 => 1,);
+        return array (  170 => 35,  152 => 33,  134 => 7,  115 => 5,  103 => 36,  101 => 35,  98 => 34,  96 => 33,  83 => 23,  77 => 20,  71 => 17,  60 => 8,  58 => 7,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -218,15 +212,12 @@ class __TwigTemplate_bba37f563a5e776d38bf009e5eb5758fe244c8d7e87958a2d3f9274361d
     <body>
 
         <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">
-  <a class=\"navbar-brand\" href=\"{{path('home')}}\">Sonatel Academy</a>
-  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarColor02\" aria-controls=\"navbarColor02\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
-    <span class=\"navbar-toggler-icon\"></span>
-  </button>
+  
 
   <div class=\"collapse navbar-collapse\" id=\"navbarColor02\">
     <ul class=\"navbar-nav mr-auto\">
       <li class=\"nav-item\">
-        <a class=\"nav-link\" href=\"{{path('accueil')}}\">Home <span class=\"sr-only\">(current)</span></a>
+        <a class=\"nav-link\" href=\"{{path('accueil')}}\">Accueil <span class=\"sr-only\">(current)</span></a>
       </li>
       <li class=\"nav-item\">
         <a class=\"nav-link\" href=\"{{path('ajout')}}\">Ajout Employer</a>
